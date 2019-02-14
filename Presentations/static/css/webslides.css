@@ -211,6 +211,11 @@ ul {
   list-style: square;
   text-indent: inherit; }
 
+.ulnone {
+  list-style: none;
+  text-indent: 0%;
+}
+
 ol {
   list-style: decimal; }
 
@@ -1525,7 +1530,8 @@ form[class*='bg-'] {
   left: 0;
   position: absolute;
   right: 0;
-  top: 0; }
+  top: 0; 
+  opacity: .5}
 
 /*=== BG Positions === */
 .background {
@@ -3789,3 +3795,7 @@ Slides Index
 
 .text-slide-number {
   color: #abc; }
+
+.transparent {
+  opacity: .5
+}
