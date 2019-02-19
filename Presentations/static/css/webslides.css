@@ -211,11 +211,6 @@ ul {
   list-style: square;
   text-indent: inherit; }
 
-.ulnone {
-  list-style: none;
-  text-indent: 0%;
-}
-
 ol {
   list-style: decimal; }
 
@@ -420,9 +415,9 @@ header nav,
 footer nav {
   margin-left: auto;
   margin-right: auto;
-  max-width: 90%;
+  max-width: 100%;
   position: relative;
-  width: 90%;
+  width: 100%;
   z-index: 2; }
   @media (min-width: 1024px) {
     .wrap,
@@ -1428,6 +1423,7 @@ section * {
           animation: fadeIn .6s ease-in-out; }
 
 section .background,
+section .backgroundtwo,
 section .light,
 section .dark {
   -webkit-animation-duration: 0s;
@@ -1531,41 +1527,87 @@ form[class*='bg-'] {
   position: absolute;
   right: 0;
   top: 0; 
-  opacity: .5}
+  opacity: .4}
+
+.backgroundtwo,
+[class*='backgroundtwo-'] {
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; 
+  opacity: .1}
 
 /*=== BG Positions === */
 .background {
   background-position: center;
   background-size: cover;
+}
+
+.backgroundtwo {
+  background-position: center;
+  background-size: cover;
+}
+
   /*fullscreen video
     <video class="background-video">
   */ }
   .background-top {
     background-position: top;
     background-size: cover; }
+  .backgroundtwo-top {
+    background-position: top;
+    background-size: cover; }
   .background-bottom {
+    background-position: bottom;
+    background-size: cover; }
+  .backgroundtwo-bottom {
     background-position: bottom;
     background-size: cover; }
   .background-center {
     background-position: center; }
+  .backgroundtwo-center {
+    background-position: center; }
   .background-center-top {
+    background-position: center top; }
+  .backgroundtwo-center-top {
     background-position: center top; }
   .background-right-top {
     background-position: right top; }
+  .backgroundtwo-right-top {
+    background-position: right top; }
   .background-left-top {
     background-position: left top; }
+  .backgroundtwo-left-top {
+    background-position: left top; }
   .background-center-bottom, .background-left-bottom, .background-right-bottom, .background-left, .background-right {
+    background-position: center bottom; }
+  .backgroundtwo-center-bottom, .backgroundtwo-left-bottom, .backgroundtwo-right-bottom, .backgroundtwo-left, .backgroundtwo-right {
     background-position: center bottom; }
   @media (min-width: 1024px) {
     .background-left-bottom {
       background-position: left bottom; }
+    .backgroundtwo-left-bottom {
+      background-position: left bottom; }
     .background-right-bottom {
+      background-position: right bottom; }
+    .backgroundtwo-right-bottom {
       background-position: right bottom; }
     .background-right {
       background-position: right; }
+    .backgroundtwo-right {
+      background-position: right; }
     .background-left {
       background-position: left; } }
+    .backgroundtwo-left {
+      background-position: left; } }
   .background-video {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    width: 100%; }
+  .backgroundtwo-video {
     height: 100%;
     -o-object-fit: fill;
        object-fit: fill;
@@ -1601,10 +1643,21 @@ form[class*='bg-'] {
   background-size: 100%;
   height: 200%; }
 
+  .backgroundtwo.anim {
+    -webkit-animation: anim 80s linear infinite;
+            animation: anim 80s linear infinite;
+    background-position: center top;
+    background-repeat: repeat;
+    background-size: 100%;
+    height: 200%; }
+
 /*=== Background with a frame === */
 /*<span class="background" style="background-image:url('image.jpg')"></span>
 <span class="background frame"></span>*/
 [class*='background'].frame {
+  margin: 2.4rem; }
+
+[class*='backgroundtwo'].frame {
   margin: 2.4rem; }
 
 /* === 5.2 Counter / Navigation Slides  === */
@@ -3774,8 +3827,7 @@ Slides (Counter/Arrows)
 Footer
 ============================== */
 footer[role='contentinfo'] {
-  background-color: #fff;
-  opacity: 50%; }
+  background-color: #fff; }
 
 /*============================
 Slides Index
@@ -3796,7 +3848,3 @@ Slides Index
 
 .text-slide-number {
   color: #abc; }
-
-.transparent {
-  opacity: .5
-}
