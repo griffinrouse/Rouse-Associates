@@ -3827,7 +3827,8 @@ Slides (Counter/Arrows)
 Footer
 ============================== */
 footer[role='contentinfo'] {
-  background-color: #fff; }
+  background-color: #fff;
+  opacity: .5 }
 
 /*============================
 Slides Index
