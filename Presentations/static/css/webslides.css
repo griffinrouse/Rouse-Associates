@@ -1552,7 +1552,7 @@ form[class*='bg-'] {
 
   /*fullscreen video
     <video class="background-video">
-  */ }
+  */
   .background-top {
     background-position: top;
     background-size: cover; }
@@ -1599,9 +1599,9 @@ form[class*='bg-'] {
     .backgroundtwo-right {
       background-position: right; }
     .background-left {
-      background-position: left; } }
+      background-position: left; }
     .backgroundtwo-left {
-      background-position: left; } }
+      background-position: left; }
   .background-video {
     height: 100%;
     -o-object-fit: fill;
@@ -3849,3 +3849,4 @@ Slides Index
 
 .text-slide-number {
   color: #abc; }
+  }
