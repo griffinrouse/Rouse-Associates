@@ -843,6 +843,10 @@ ul.description li,
   list-style: none;
   margin-left: 0; }
 
+.ulnone {
+  list-style-type: none;
+}
+
 .column ol > li {
   margin-left: 1.6rem; }
 
